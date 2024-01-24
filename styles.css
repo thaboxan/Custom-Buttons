@@ -1,0 +1,100 @@
+button {
+  /* Setting dimensions (width, height, and spacing) */
+  width: 130px;
+  height: 40px;
+  margin: 20px 20px 20px 200px; 
+  border-radius: 5px; /* Rounded corners for a softer look */
+  padding: 10px 25px; 
+  position: relative; /* Allow for positioning of pseudo-elements */
+
+  /* text and typography*/
+  color: white; /* initially all text should be white*/
+  font-family: 'Roboto', sans-serif; /* Modern and versatile font */
+  font-weight: 500; /* heavy weight for visual emphasis */
+  background: transparent; /* baseline background is transparent to aid visual effects */
+
+  /* Cursor and animation */
+  cursor: grab; /* Indicate interactivity on hover */
+  transition: all 0.6s ease; /* Smooth transitions for a natural feel */
+
+  /* Multi-layered box shadow for depth and dimension */
+  box-shadow:
+    inset 2px 2px 2px 0 #ffffff50,  
+    7px 7px 20px 0 #0000001a,  
+    4px 4px 5px 0 #0000001a;   
+    outline: none; /* Remove default outline on focus */
+}
+
+/* CSS Styling for the .click-here Button */
+
+/* Initial state */
+.click-here {
+  background: #060e0d; /* Initial dark blue background */
+  background: linear-gradient(0deg, #060e83
+ 100%, #0c19b4
+ 100%); /*  gradient for visual texture */
+  border: none; /* remove the border for a sleek feel */
+}
+
+/* Hover State */
+.click-here:hover {
+  background: #1317f0; /* blue on hover */
+  background: linear-gradient(0deg, #0003ff 0%, #027efb 100%); /* Dynamic gradient for visual appeal */
+
+ /*transform animation on hover*/ 
+  
+ transform:translateX(20px)rotate(7deg);
+ background-color:#c3bacc;
+ transition:0.5s;
+}
+
+/* CSS for the .hi Button */
+
+.hi {
+  background: #460ea1; /* Purple base color */
+   background: linear-gradient(180deg, #711ff5 0%, #8105f0 100%); /* Gradient for visual interest */
+  border: none; /* borderless design */
+}
+
+.hi:hover {
+/* When mouse hovers on the button, the button has to enlarge by 20% for emphasis  */
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* CSS for the .oh-yeah Button */
+
+.oh-yeah {
+  background: #fa9f16; /* orange background */
+  border: none; /* Borderless design */ 
+  z-index: 1; /* Ensure button content is above the pseudo-element */
+}
+
+/* Pseudo-element for visual effect on hover */
+.oh-yeah:after {
+  border-radius: 4px; /* Rounded corners to match button */
+  width: 100%;
+  height: 0; /* Initially hidden */
+  position: absolute; /* Position relative to the button */
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place behind the button content */
+
+    /* base color with diagonal gradient */
+  background-color: #eaf818;
+  background-image: linear-gradient(285deg, #eaf818 0%, #f6fc9c 90%); 
+  transition: all 0.3s ease; /* Smooth transitions*/
+}
+
+/* Hover state for the .oh-yeah button */
+.oh-yeah:hover {
+  color: #000;
+}
+
+/* Animate the pseudo-element on hover */
+.oh-yeah:hover:after {
+  top: auto; /* Move to the bottom */
+  bottom: 0;
+  height: 100%; /* Expand to fill the button */
+}
